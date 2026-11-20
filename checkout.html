@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оформление заказа — мастерская «Фитиль»</title>
+  <meta name="description" content="Оформление заказа свечей «Фитиль»: состав корзины, самовывоз или курьер по Москве, проверка контактов. Оплата не списывается.">
+  <meta property="og:title" content="Оформление заказа — «Фитиль»">
+  <meta property="og:description" content="Проверьте состав корзины и контакты. Это демонстрационная страница, заказ не уходит на сервер.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1200&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#221C18">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+  <a class="skip" href="#content">К содержанию</a>
+  <header class="header">
+    <a class="logo" href="index.html">Фитиль<span>мастерская свечей</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html#catalog">Каталог</a>
+      <a href="index.html#about">Мастерская</a>
+      <a href="checkout.html">Заказ</a>
+    </nav>
+    <div class="header-tools">
+      <button class="cart-btn" type="button" id="open-cart">Корзина <span id="cart-count">0</span></button>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <main id="content" class="checkout">
+    <div class="section-head">
+      <p class="eyebrow">Оформление</p>
+      <h1>Заказ</h1>
+      <p>Корзина хранится в этом браузере. Если очистить данные сайта, состав пропадёт. Деньги не списываются.</p>
+    </div>
+    <div class="checkout-grid">
+      <section class="sheet" aria-live="polite">
+        <h2>Состав</h2>
+        <div id="checkout-lines"></div>
+        <p class="empty-note" id="checkout-empty" hidden>Корзина пуста. <a href="index.html#catalog">Вернуться в каталог</a></p>
+        <fieldset class="delivery" id="delivery-box">
+          <legend>Доставка</legend>
+          <label class="choice"><input type="radio" name="delivery" value="pickup" checked> Самовывоз, Ольховская 16 · 0 ₽</label>
+          <label class="choice"><input type="radio" name="delivery" value="courier"> Курьер внутри МКАД · 390 ₽</label>
+        </fieldset>
+        <p class="total-line">К оплате при получении <strong id="checkout-total">0 ₽</strong></p>
+      </section>
+      <form class="form" id="order-form" novalidate>
+        <div id="order-fields">
+          <div class="form-grid">
+            <label class="field">
+              <span>Имя</span>
+              <input id="name" type="text" autocomplete="name" required placeholder="Мария">
+              <small class="error" id="name-error"></small>
+            </label>
+            <label class="field">
+              <span>Телефон</span>
+              <input id="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="+7 916 000-00-00">
+              <small class="error" id="phone-error"></small>
+            </label>
+            <label class="field field-wide">
+              <span>Почта</span>
+              <input id="email" type="email" autocomplete="email" required placeholder="maria@example.com">
+              <small class="error" id="email-error"></small>
+            </label>
+            <label class="field">
+              <span>Город</span>
+              <input id="city" type="text" autocomplete="address-level2" required placeholder="Москва">
+              <small class="error" id="city-error"></small>
+            </label>
+            <label class="field">
+              <span>Адрес</span>
+              <input id="address" type="text" autocomplete="street-address" placeholder="Улица, дом, квартира">
+              <small class="error" id="address-error"></small>
+            </label>
+            <label class="field field-wide">
+              <span>Комментарий</span>
+              <textarea id="comment" rows="3" placeholder="Домофон, удобное время"></textarea>
+              <small class="error" id="comment-error"></small>
+            </label>
+            <label class="choice field-wide">
+              <input id="consent" type="checkbox">
+              <span>Понимаю, что это демонстрация и заказ не будет собран</span>
+            </label>
+            <small class="error field-wide" id="consent-error"></small>
+          </div>
+          <button class="btn btn-accent" id="order-submit" type="submit">Подтвердить заказ</button>
+        </div>
+        <p class="form-success" id="order-success" hidden tabindex="-1"></p>
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+    <p class="logo">Фитиль</p>
+    <p>ул. Ольховская, 16 · будни 12:00–20:00</p>
+    <a href="index.html">В каталог</a>
+  </footer>
+  <div class="drawer-back" id="drawer-back" hidden></div>
+  <aside class="drawer" id="drawer" hidden aria-labelledby="drawer-title">
+    <div class="drawer-head">
+      <h2 id="drawer-title">Корзина</h2>
+      <button type="button" id="close-cart" aria-label="Закрыть корзину">Закрыть</button>
+    </div>
+    <div class="drawer-body" id="drawer-body"></div>
+    <div class="drawer-foot">
+      <p>Сумма <strong id="drawer-sum">0 ₽</strong></p>
+      <a class="btn btn-accent" href="checkout.html">Оформить заказ</a>
+    </div>
+  </aside>
+  <script src="js/main.js"></script>
+</body>
+</html>

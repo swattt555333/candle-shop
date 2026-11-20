@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мастерская свечей «Фитиль» — соевый воск ручной заливки</title>
+  <meta name="description" content="Мастерская «Фитиль» в Москве: соевые и ароматические свечи, наборы в подарок. Каталог с фильтром, корзина и оформление заказа.">
+  <meta property="og:title" content="Мастерская свечей «Фитиль»">
+  <meta property="og:description" content="Свечи ручной заливки из соевого воска. Самовывоз на Ольховской и курьер по Москве.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1200&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#221C18">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+  <a class="skip" href="#content">К содержанию</a>
+  <header class="header">
+    <a class="logo" href="index.html">Фитиль<span>мастерская свечей</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html#catalog">Каталог</a>
+      <a href="index.html#about">Мастерская</a>
+      <a href="checkout.html">Заказ</a>
+    </nav>
+    <div class="header-tools">
+      <button class="cart-btn" type="button" id="open-cart">Корзина <span id="cart-count">0</span></button>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Москва · заливаем по четвергам</p>
+        <h1>Свечи, которые не пахнут «магазином».</h1>
+        <p class="lede">Соевый воск, деревянные и хлопковые фитили, отдушки небольшими партиями. Девять позиций в наличии — без бесконечной ленты.</p>
+        <a class="btn btn-accent" href="#catalog">Выбрать свечу</a>
+      </div>
+      <figure class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=1400&q=80" alt="Несколько горящих свечей на тёплом деревянном столе" width="1400" height="1200">
+      </figure>
+    </section>
+    <section class="section" id="catalog">
+      <div class="section-head reveal">
+        <p class="eyebrow">Каталог</p>
+        <h2>Что можно забрать на этой неделе</h2>
+      </div>
+      <div class="toolbar reveal">
+        <div class="filters" role="group" aria-label="Категории">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Все</button>
+          <button class="filter" type="button" data-filter="soy" aria-pressed="false">Соевые</button>
+          <button class="filter" type="button" data-filter="aroma" aria-pressed="false">Ароматические</button>
+          <button class="filter" type="button" data-filter="plain" aria-pressed="false">Без аромата</button>
+          <button class="filter" type="button" data-filter="gift" aria-pressed="false">Наборы</button>
+        </div>
+        <label class="sort">
+          <span>Сортировка</span>
+          <select id="sort">
+            <option value="featured">Как в мастерской</option>
+            <option value="asc">Сначала дешевле</option>
+            <option value="desc">Сначала дороже</option>
+          </select>
+        </label>
+      </div>
+      <div class="catalog" id="catalog-grid"></div>
+      <p class="empty-note" id="catalog-empty" hidden>В этой категории сейчас пусто.</p>
+    </section>
+    <section class="section about" id="about">
+      <div class="reveal">
+        <p class="eyebrow">Мастерская</p>
+        <h2>Ольховская, цоколь с окном во двор</h2>
+        <p>Льём в стеклянные банки и столбы. Воск — соевый, фитиль подбираем под диаметр, чтобы не коптил. Партия от остывания до этикетки занимает два дня.</p>
+        <p>Самовывоз бесплатный по будням с 12:00 до 20:00. Курьер по Москве внутри МКАД — на следующий день, 390 ₽. Оплата в этой демонстрации не списывается: заказ только проверяется в браузере.</p>
+      </div>
+      <figure class="reveal">
+        <img src="https://images.unsplash.com/photo-1608181831688-b2a476cb100c?auto=format&fit=crop&w=1200&q=80" alt="Сухоцветы и травы, разложенные на светлом столе" width="1200" height="900">
+        <figcaption>Сухоцветы кладём в подарочные коробки, не в сам воск.</figcaption>
+      </figure>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="logo">Фитиль</p>
+    <p>Мастерская свечей. Москва, ул. Ольховская, 16. +7 (495) 032-18-40 · hi@fitil.shop</p>
+    <a href="#top">Наверх</a>
+  </footer>
+  <div class="drawer-back" id="drawer-back" hidden></div>
+  <aside class="drawer" id="drawer" hidden aria-labelledby="drawer-title">
+    <div class="drawer-head">
+      <h2 id="drawer-title">Корзина</h2>
+      <button type="button" id="close-cart" aria-label="Закрыть корзину">Закрыть</button>
+    </div>
+    <div class="drawer-body" id="drawer-body"></div>
+    <div class="drawer-foot">
+      <p>Сумма <strong id="drawer-sum">0 ₽</strong></p>
+      <a class="btn btn-accent" href="checkout.html">Оформить заказ</a>
+    </div>
+  </aside>
+  <script src="js/main.js"></script>
+</body>
+</html>
